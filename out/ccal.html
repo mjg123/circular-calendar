@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <title>CCAL</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="reset.css"/>
+  <link rel="stylesheet" href="codemirror.css"/>
+<!--
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/raphael-min.js"></script>
+  <script src="js/codemirror.js"></script>
+  <script src="js/clojure.js"></script>
+
+<style type="text/css">
+
+    .editor-wrap { width: 600px;
+                   height: 650px; }
+
+    .ce { height: 600px; width: 100%;
+    border: 1px solid #CCC;
+          display: inline-block;}
+
+    #cal {width: 600px; height: 600px;
+          display: inline-block;
+          border: 1px solid teal;
+          }
+
+    input {border: 1px solid #CCC;
+           background-color: #EEE;}
+
+    #editor {border: 1px dashed teal; float: left;}
+  </style>
+  <body>
+
+    <div id="editor">
+      <div id="c-wrap" class="editor-wrap">
+        <h2>Calendar data</h2>
+        <textarea class="ce" id="c-text" contenteditable="true">...</textarea>
+      </div>
+      <div id="e-wrap" class="editor-wrap">
+        <h2>Event data</h2>
+        <textarea class="ce" id="e-text" contenteditable="true">...</textarea>
+      </div>
+      <br/>
+      <input type="button" id="render" value="render"/>
+      <input type="button" id="toggle" value="toggle"/>
+      <a target="_blank" href="http://disc.sci.gsfc.nasa.gov/julian_calendar.shtml#non-leap_year">Days of years</a>
+    </div>
+
+    <div id="cal"></div>
+
+    <script src="js/ccal.js"></script>
+  </body>
+</html>
