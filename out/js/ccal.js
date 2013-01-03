@@ -23521,12 +23521,12 @@ goog.require("cljs.reader");
 goog.require("jayq.core");
 goog.require("cljs.reader");
 goog.require("jayq.core");
-var $cal_142642 = jayq.core.$.call(null, "\ufdd0'#cal");
-var w_142643 = $cal_142642.width();
-var h_142644 = $cal_142642.height();
-ccal.size = cljs.core.ObjMap.fromObject(["\ufdd0'w", "\ufdd0'h", "\ufdd0'w2", "\ufdd0'h2"], {"\ufdd0'w":w_142643, "\ufdd0'h":h_142644, "\ufdd0'w2":w_142643 / 2, "\ufdd0'h2":h_142644 / 2});
+var $cal_142940 = jayq.core.$.call(null, "\ufdd0'#cal");
+var w_142941 = $cal_142940.width();
+var h_142942 = $cal_142940.height();
+ccal.size = cljs.core.ObjMap.fromObject(["\ufdd0'w", "\ufdd0'h", "\ufdd0'w2", "\ufdd0'h2"], {"\ufdd0'w":w_142941, "\ufdd0'h":h_142942, "\ufdd0'w2":w_142941 / 2, "\ufdd0'h2":h_142942 / 2});
 ccal.cal_text = cljs.core.atom.call(null, '{:radius 250\n :rotate -60\n :m-ticks {:line {:in 0.95 :out 1.05 :col "#888"}\n           :label {:trad 1.03 :trot 272 :theta 4 :tcol "#00A"}}\n :m-evs [[1 "Jan"] [32 "Feb"] [60 "Mar"]\n         [91 "Apr"] [121 "May"] [152 "Jun"]\n         [182 "July"] [213 "Aug"] [244 "Sept"]\n         [274 "Oct"] [305 "Nov"] [335 "Dec"]]\n :w-ticks {:line {:in 0.99 :out 1.01 :col "#444"}}}');
-ccal.evs_text = cljs.core.atom.call(null, '{:default {:line {:in 0.8 :out 1 :col "#080"}\n           :label {:text "???" :tsize 1 :tcol "#000" :trad 0.85 :theta 2}}\n 1  [{:label {:text "NYD10k!" :tcol "#800"}\n      :line {:col "#0AA"}}]\n 13 [{:label {:text "Rough \'n\' Tumble Ten" :tcol "#800" :trad 0.7 :theta 2}}\n     {:label {:text "A" :tcol "#F00" :trot -90 :trad 1.15 :theta 0}\n      :line {:in 1 :out 1.1 :col "#F00"}}]}');
+ccal.evs_text = cljs.core.atom.call(null, '{:default {:line {:in 0.8 :out 1 :col "#080"}\n           :label {:text "???" :tsize 1 :tcol "#000" :trad 0.85 :theta 2}}\n 1   [{:label {:text "NYD10k!" :tcol "#800"}}]\n 13  [{:label {:text "Rough \'n\' Tumble Ten" :tcol "#800" :trad 0.7}}]\n 34  [{:label {:text "Haglof Open 5" :trad 0.8}}\n      {:label {:text "C" :tcol "#800" :trot -90 :trad 1.12 :tsize 1.1 :theta 0}\n       :line {:in 1.05 :out 1.1 :col "#800"}}]\n 54  [{:label {:text "\u2638 Gospel Pass"}}\n      {:label {:text "C" :tcol "#800" :trot -90 :trad 1.12 :tsize 1.1 :theta 0}\n       :line {:in 1.05 :out 1.1 :col "#800"}}]\n 69  [{:label {:text "Grizzly"}}]\n 76  [{:label {:text "\u2638 Lionheart"}}\n      {:label {:text "B" :tcol "#C00" :trot -90 :trad 1.13 :tsize 1.5 :theta 0}\n       :line {:in 1.05 :out 1.1 :col "#800"}}]\n 96  [{:label {:text "Bath Beat" :theta -2}}]\n 97  [{:label {:text "Exe to Axe"}}]\n 117 [{:label {:text "Three Peaks Race" :trad 0.78}}\n      {:label {:text "B" :tcol "#C00" :trot -90 :trad 1.13 :tsize 1.5 :theta 0}\n       :line {:in 1.05 :out 1.1 :col "#800"}}]\n 132 [{:label {:text "\u2638 Fred Whitton Challenge" :trad 0.7}}]\n 152 [{:label {:text "Hot Chilli\\nEndurance Weekend" :theta 3 :trad 0.7}}]\n 187 [{:label {:text "CELTMAN!" :tcol "#A00" :tsize 1.5 :trad 0.8}}\n      {:label {:text "A" :tcol "#F00" :trot -90 :trad 1.13 :tsize 2 :theta 0}\n       :line {:in 1.05 :out 1.1 :col "#800"}}]\n 214 [{:label {:text "Grim Reaper" :tcol "#A00" :tsize 1.5 :trad 0.79}}]\n 251 [{:label {:text "IM WALES" :tcol "#A00" :tsize 1.5 :trad 0.79}}]}\n');
 ccal.cal = cljs.core.atom.call(null, cljs.reader.read_string.call(null, cljs.core.deref.call(null, ccal.cal_text)));
 ccal.evs = cljs.core.atom.call(null, cljs.reader.read_string.call(null, cljs.core.deref.call(null, ccal.evs_text)));
 ccal.$c_text = jayq.core.$.call(null, "\ufdd0'#c-text");
@@ -23551,18 +23551,18 @@ ccal.rotate = function() {
   var rotate__2 = function($e, deg) {
     return $e.transform(cljs.core.clj__GT_js.call(null, cljs.core.PersistentVector.fromArray(["...R", deg], true)))
   };
-  var rotate__3 = function($e, deg, p__142645) {
-    var vec__142647 = p__142645;
-    var cx = cljs.core.nth.call(null, vec__142647, 0, null);
-    var cy = cljs.core.nth.call(null, vec__142647, 1, null);
+  var rotate__3 = function($e, deg, p__142943) {
+    var vec__142945 = p__142943;
+    var cx = cljs.core.nth.call(null, vec__142945, 0, null);
+    var cy = cljs.core.nth.call(null, vec__142945, 1, null);
     return $e.transform(cljs.core.clj__GT_js.call(null, cljs.core.PersistentVector.fromArray(["...R", deg, cx, cy], true)))
   };
-  rotate = function($e, deg, p__142645) {
+  rotate = function($e, deg, p__142943) {
     switch(arguments.length) {
       case 2:
         return rotate__2.call(this, $e, deg);
       case 3:
-        return rotate__3.call(this, $e, deg, p__142645)
+        return rotate__3.call(this, $e, deg, p__142943)
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -23576,28 +23576,28 @@ ccal.translate = function translate($e, x, y) {
 ccal.scale = function scale($e, s) {
   return $e.transform(cljs.core.clj__GT_js.call(null, cljs.core.PersistentVector.fromArray(["...S", s], true)))
 };
-ccal.draw_ev = function draw_ev(p__142649, deg) {
-  var map__142654 = p__142649;
-  var map__142654__$1 = cljs.core.seq_QMARK_.call(null, map__142654) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142654) : map__142654;
-  var map__142655 = cljs.core._lookup.call(null, map__142654__$1, "\ufdd0'line", null);
-  var map__142655__$1 = cljs.core.seq_QMARK_.call(null, map__142655) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142655) : map__142655;
-  var col = cljs.core._lookup.call(null, map__142655__$1, "\ufdd0'col", null);
-  var out = cljs.core._lookup.call(null, map__142655__$1, "\ufdd0'out", null);
-  var in$ = cljs.core._lookup.call(null, map__142655__$1, "\ufdd0'in", null);
-  var map__142656 = cljs.core._lookup.call(null, map__142654__$1, "\ufdd0'label", null);
-  var map__142656__$1 = cljs.core.seq_QMARK_.call(null, map__142656) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142656) : map__142656;
-  var tsize = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'tsize", null);
-  var tcol = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'tcol", null);
-  var theta = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'theta", null);
-  var trot = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'trot", null);
-  var trad = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'trad", null);
-  var text = cljs.core._lookup.call(null, map__142656__$1, "\ufdd0'text", null);
-  var map__142657 = ccal.size;
-  var map__142657__$1 = cljs.core.seq_QMARK_.call(null, map__142657) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142657) : map__142657;
-  var h2 = cljs.core._lookup.call(null, map__142657__$1, "\ufdd0'h2", null);
-  var w2 = cljs.core._lookup.call(null, map__142657__$1, "\ufdd0'w2", null);
-  var r = function(p1__142648_SHARP_) {
-    return w2 - p1__142648_SHARP_ * cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'radius")
+ccal.draw_ev = function draw_ev(p__142947, deg) {
+  var map__142952 = p__142947;
+  var map__142952__$1 = cljs.core.seq_QMARK_.call(null, map__142952) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142952) : map__142952;
+  var map__142953 = cljs.core._lookup.call(null, map__142952__$1, "\ufdd0'line", null);
+  var map__142953__$1 = cljs.core.seq_QMARK_.call(null, map__142953) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142953) : map__142953;
+  var col = cljs.core._lookup.call(null, map__142953__$1, "\ufdd0'col", null);
+  var out = cljs.core._lookup.call(null, map__142953__$1, "\ufdd0'out", null);
+  var in$ = cljs.core._lookup.call(null, map__142953__$1, "\ufdd0'in", null);
+  var map__142954 = cljs.core._lookup.call(null, map__142952__$1, "\ufdd0'label", null);
+  var map__142954__$1 = cljs.core.seq_QMARK_.call(null, map__142954) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142954) : map__142954;
+  var tsize = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'tsize", null);
+  var tcol = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'tcol", null);
+  var theta = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'theta", null);
+  var trot = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'trot", null);
+  var trad = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'trad", null);
+  var text = cljs.core._lookup.call(null, map__142954__$1, "\ufdd0'text", null);
+  var map__142955 = ccal.size;
+  var map__142955__$1 = cljs.core.seq_QMARK_.call(null, map__142955) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142955) : map__142955;
+  var h2 = cljs.core._lookup.call(null, map__142955__$1, "\ufdd0'h2", null);
+  var w2 = cljs.core._lookup.call(null, map__142955__$1, "\ufdd0'w2", null);
+  var r = function(p1__142946_SHARP_) {
+    return w2 - p1__142946_SHARP_ * cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'radius")
   };
   var s = ccal.$raf.set();
   s.push(ccal.line.call(null, ccal.$raf, r.call(null, in$), h2, r.call(null, out), h2).attr("stroke", col));
@@ -23611,33 +23611,33 @@ ccal.day2deg = function day2deg(day) {
   return cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'rotate") + day * 360 / 365 + -1
 };
 ccal.draw_cal = function draw_cal() {
-  var map__142661 = ccal.size;
-  var map__142661__$1 = cljs.core.seq_QMARK_.call(null, map__142661) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142661) : map__142661;
-  var h2 = cljs.core._lookup.call(null, map__142661__$1, "\ufdd0'h2", null);
-  var w2 = cljs.core._lookup.call(null, map__142661__$1, "\ufdd0'w2", null);
+  var map__142959 = ccal.size;
+  var map__142959__$1 = cljs.core.seq_QMARK_.call(null, map__142959) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142959) : map__142959;
+  var h2 = cljs.core._lookup.call(null, map__142959__$1, "\ufdd0'h2", null);
+  var w2 = cljs.core._lookup.call(null, map__142959__$1, "\ufdd0'w2", null);
   var r = cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'radius");
   ccal.$raf.circle(w2, h2, r).attr("stroke", "#EEE").attr("stroke-width", 2);
   ccal.scale.call(null, ccal.$raf.text(w2, h2, "2013").attr("fill", "#f00"), 2);
-  var G__142662_142664 = cljs.core.seq.call(null, cljs.core.range.call(null, 12));
+  var G__142960_142962 = cljs.core.seq.call(null, cljs.core.range.call(null, 12));
   while(true) {
-    if(G__142662_142664) {
-      var x_142665 = cljs.core.first.call(null, G__142662_142664);
-      ccal.draw_ev.call(null, cljs.core.assoc_in.call(null, cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'm-ticks"), cljs.core.PersistentVector.fromArray(["\ufdd0'label", "\ufdd0'text"], true), cljs.core.get_in.call(null, cljs.core.deref.call(null, ccal.cal), cljs.core.PersistentVector.fromArray(["\ufdd0'm-evs", x_142665, 1], true))), ccal.day2deg.call(null, cljs.core.get_in.call(null, cljs.core.deref.call(null, ccal.cal), cljs.core.PersistentVector.fromArray(["\ufdd0'm-evs", x_142665, 
+    if(G__142960_142962) {
+      var x_142963 = cljs.core.first.call(null, G__142960_142962);
+      ccal.draw_ev.call(null, cljs.core.assoc_in.call(null, cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'm-ticks"), cljs.core.PersistentVector.fromArray(["\ufdd0'label", "\ufdd0'text"], true), cljs.core.get_in.call(null, cljs.core.deref.call(null, ccal.cal), cljs.core.PersistentVector.fromArray(["\ufdd0'm-evs", x_142963, 1], true))), ccal.day2deg.call(null, cljs.core.get_in.call(null, cljs.core.deref.call(null, ccal.cal), cljs.core.PersistentVector.fromArray(["\ufdd0'm-evs", x_142963, 
       0], true))));
-      var G__142666 = cljs.core.next.call(null, G__142662_142664);
-      G__142662_142664 = G__142666;
+      var G__142964 = cljs.core.next.call(null, G__142960_142962);
+      G__142960_142962 = G__142964;
       continue
     }else {
     }
     break
   }
-  var G__142663 = cljs.core.seq.call(null, cljs.core.range.call(null, 52));
+  var G__142961 = cljs.core.seq.call(null, cljs.core.range.call(null, 52));
   while(true) {
-    if(G__142663) {
-      var x = cljs.core.first.call(null, G__142663);
+    if(G__142961) {
+      var x = cljs.core.first.call(null, G__142961);
       ccal.draw_ev.call(null, cljs.core.deref.call(null, ccal.cal).call(null, "\ufdd0'w-ticks"), ccal.day2deg.call(null, 7 * x));
-      var G__142667 = cljs.core.next.call(null, G__142663);
-      G__142663 = G__142667;
+      var G__142965 = cljs.core.next.call(null, G__142961);
+      G__142961 = G__142965;
       continue
     }else {
       return null
@@ -23646,36 +23646,36 @@ ccal.draw_cal = function draw_cal() {
   }
 };
 ccal.draw_evs = function draw_evs() {
-  var map__142672 = ccal.size;
-  var map__142672__$1 = cljs.core.seq_QMARK_.call(null, map__142672) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142672) : map__142672;
-  var h2 = cljs.core._lookup.call(null, map__142672__$1, "\ufdd0'h2", null);
-  var w2 = cljs.core._lookup.call(null, map__142672__$1, "\ufdd0'w2", null);
+  var map__142970 = ccal.size;
+  var map__142970__$1 = cljs.core.seq_QMARK_.call(null, map__142970) ? cljs.core.apply.call(null, cljs.core.hash_map, map__142970) : map__142970;
+  var h2 = cljs.core._lookup.call(null, map__142970__$1, "\ufdd0'h2", null);
+  var w2 = cljs.core._lookup.call(null, map__142970__$1, "\ufdd0'w2", null);
   var defs = cljs.core.deref.call(null, ccal.evs).call(null, "\ufdd0'default");
-  var G__142673 = cljs.core.seq.call(null, cljs.core.deref.call(null, ccal.evs));
+  var G__142971 = cljs.core.seq.call(null, cljs.core.deref.call(null, ccal.evs));
   while(true) {
-    if(G__142673) {
-      var vec__142675 = cljs.core.first.call(null, G__142673);
-      var k = cljs.core.nth.call(null, vec__142675, 0, null);
-      var vs = cljs.core.nth.call(null, vec__142675, 1, null);
+    if(G__142971) {
+      var vec__142973 = cljs.core.first.call(null, G__142971);
+      var k = cljs.core.nth.call(null, vec__142973, 0, null);
+      var vs = cljs.core.nth.call(null, vec__142973, 1, null);
       if(cljs.core.number_QMARK_.call(null, k)) {
-        var G__142674_142676 = cljs.core.seq.call(null, vs);
+        var G__142972_142974 = cljs.core.seq.call(null, vs);
         while(true) {
-          if(G__142674_142676) {
-            var v_142677 = cljs.core.first.call(null, G__142674_142676);
-            ccal.draw_ev.call(null, cljs.core.ObjMap.fromObject(["\ufdd0'line", "\ufdd0'label"], {"\ufdd0'line":cljs.core.merge.call(null, defs.call(null, "\ufdd0'line"), v_142677.call(null, "\ufdd0'line")), "\ufdd0'label":cljs.core.merge.call(null, defs.call(null, "\ufdd0'label"), v_142677.call(null, "\ufdd0'label"))}), ccal.day2deg.call(null, k));
-            var G__142678 = cljs.core.next.call(null, G__142674_142676);
-            G__142674_142676 = G__142678;
+          if(G__142972_142974) {
+            var v_142975 = cljs.core.first.call(null, G__142972_142974);
+            ccal.draw_ev.call(null, cljs.core.ObjMap.fromObject(["\ufdd0'line", "\ufdd0'label"], {"\ufdd0'line":cljs.core.merge.call(null, defs.call(null, "\ufdd0'line"), v_142975.call(null, "\ufdd0'line")), "\ufdd0'label":cljs.core.merge.call(null, defs.call(null, "\ufdd0'label"), v_142975.call(null, "\ufdd0'label"))}), ccal.day2deg.call(null, k));
+            var G__142976 = cljs.core.next.call(null, G__142972_142974);
+            G__142972_142974 = G__142976;
             continue
           }else {
           }
           break
         }
-        var G__142679 = cljs.core.next.call(null, G__142673);
-        G__142673 = G__142679;
+        var G__142977 = cljs.core.next.call(null, G__142971);
+        G__142971 = G__142977;
         continue
       }else {
-        var G__142680 = cljs.core.next.call(null, G__142673);
-        G__142673 = G__142680;
+        var G__142978 = cljs.core.next.call(null, G__142971);
+        G__142971 = G__142978;
         continue
       }
     }else {
@@ -23696,13 +23696,13 @@ ccal.slurp_cal = function slurp_cal() {
     cljs.core.reset_BANG_.call(null, ccal.cal_text, u_cal_text);
     cljs.core.reset_BANG_.call(null, ccal.cal, u_cal);
     return ccal.spit_cal.call(null)
-  }catch(e142682) {
-    if(cljs.core.instance_QMARK_.call(null, Object, e142682)) {
-      var e = e142682;
+  }catch(e142980) {
+    if(cljs.core.instance_QMARK_.call(null, Object, e142980)) {
+      var e = e142980;
       return alert(e)
     }else {
       if("\ufdd0'else") {
-        throw e142682;
+        throw e142980;
       }else {
         return null
       }
@@ -23716,13 +23716,13 @@ ccal.slurp_evs = function slurp_evs() {
     cljs.core.reset_BANG_.call(null, ccal.evs_text, u_evs_text);
     cljs.core.reset_BANG_.call(null, ccal.evs, u_evs);
     return ccal.spit_evs.call(null)
-  }catch(e142684) {
-    if(cljs.core.instance_QMARK_.call(null, Object, e142684)) {
-      var e = e142684;
+  }catch(e142982) {
+    if(cljs.core.instance_QMARK_.call(null, Object, e142982)) {
+      var e = e142982;
       return alert(e)
     }else {
       if("\ufdd0'else") {
-        throw e142684;
+        throw e142982;
       }else {
         return null
       }
@@ -23744,17 +23744,17 @@ jayq.core.on.call(null, jayq.core.$.call(null, "\ufdd0'#toggle"), "\ufdd0'click"
   ccal.$e_wrap.toggle();
   return ccal.$c_wrap.toggle()
 });
-var temp__3971__auto___142685 = localStorage.getItem("cal");
-if(cljs.core.truth_(temp__3971__auto___142685)) {
-  var stored_cal_142686 = temp__3971__auto___142685;
-  ccal.$c_edit.setValue(stored_cal_142686)
+var temp__3971__auto___142983 = localStorage.getItem("cal");
+if(cljs.core.truth_(temp__3971__auto___142983)) {
+  var stored_cal_142984 = temp__3971__auto___142983;
+  ccal.$c_edit.setValue(stored_cal_142984)
 }else {
   ccal.spit_cal.call(null)
 }
-var temp__3971__auto___142687 = localStorage.getItem("evs");
-if(cljs.core.truth_(temp__3971__auto___142687)) {
-  var stored_evs_142688 = temp__3971__auto___142687;
-  ccal.$e_edit.setValue(stored_evs_142688)
+var temp__3971__auto___142985 = localStorage.getItem("evs");
+if(cljs.core.truth_(temp__3971__auto___142985)) {
+  var stored_evs_142986 = temp__3971__auto___142985;
+  ccal.$e_edit.setValue(stored_evs_142986)
 }else {
   ccal.spit_evs.call(null)
 }

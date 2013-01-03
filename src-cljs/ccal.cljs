@@ -17,13 +17,16 @@
          [274 \"Oct\"] [305 \"Nov\"] [335 \"Dec\"]]
  :w-ticks {:line {:in 0.99 :out 1.01 :col \"#444\"}}}"))
 
-(def evs-text (atom "{:default {:line {:in 0.8 :out 1 :col \"#080\"}
+(def evs-text (atom "{:default {:line {:in 0.8 :out 1 :col \"#080\"}\n           :label {:text \"???\" :tsize 1 :tcol \"#000\" :trad 0.85 :theta 2}}\n 1   [{:label {:text \"NYD10k!\" :tcol \"#800\"}}]\n 13  [{:label {:text \"Rough 'n' Tumble Ten\" :tcol \"#800\" :trad 0.7}}]\n 34  [{:label {:text \"Haglof Open 5\" :trad 0.8}}\n      {:label {:text \"C\" :tcol \"#800\" :trot -90 :trad 1.12 :tsize 1.1 :theta 0}\n       :line {:in 1.05 :out 1.1 :col \"#800\"}}]\n 54  [{:label {:text \"☸ Gospel Pass\"}}\n      {:label {:text \"C\" :tcol \"#800\" :trot -90 :trad 1.12 :tsize 1.1 :theta 0}\n       :line {:in 1.05 :out 1.1 :col \"#800\"}}]\n 69  [{:label {:text \"Grizzly\"}}]\n 76  [{:label {:text \"☸ Lionheart\"}}\n      {:label {:text \"B\" :tcol \"#C00\" :trot -90 :trad 1.13 :tsize 1.5 :theta 0}\n       :line {:in 1.05 :out 1.1 :col \"#800\"}}]\n 96  [{:label {:text \"Bath Beat\" :theta -2}}]\n 97  [{:label {:text \"Exe to Axe\"}}]\n 117 [{:label {:text \"Three Peaks Race\" :trad 0.78}}\n      {:label {:text \"B\" :tcol \"#C00\" :trot -90 :trad 1.13 :tsize 1.5 :theta 0}\n       :line {:in 1.05 :out 1.1 :col \"#800\"}}]\n 132 [{:label {:text \"☸ Fred Whitton Challenge\" :trad 0.7}}]\n 152 [{:label {:text \"Hot Chilli\\nEndurance Weekend\" :theta 3 :trad 0.7}}]\n 187 [{:label {:text \"CELTMAN!\" :tcol \"#A00\" :tsize 1.5 :trad 0.8}}\n      {:label {:text \"A\" :tcol \"#F00\" :trot -90 :trad 1.13 :tsize 2 :theta 0}\n       :line {:in 1.05 :out 1.1 :col \"#800\"}}]\n 214 [{:label {:text \"Grim Reaper\" :tcol \"#A00\" :tsize 1.5 :trad 0.79}}]\n 251 [{:label {:text \"IM WALES\" :tcol \"#A00\" :tsize 1.5 :trad 0.79}}]}\n"))
+
+(comment
+  (def evs-text (atom "{:default {:line {:in 0.8 :out 1 :col \"#080\"}
            :label {:text \"???\" :tsize 1 :tcol \"#000\" :trad 0.85 :theta 2}}
  1  [{:label {:text \"NYD10k!\" :tcol \"#800\"}
       :line {:col \"#0AA\"}}]
  13 [{:label {:text \"Rough 'n' Tumble Ten\" :tcol \"#800\" :trad 0.7 :theta 2}}
      {:label {:text \"A\" :tcol \"#F00\" :trot -90 :trad 1.15 :theta 0}
-      :line {:in 1 :out 1.1 :col \"#F00\"}}]}"))
+      :line {:in 1 :out 1.1 :col \"#F00\"}}]}")))
 
 (def cal (atom (read-string @cal-text)))
 (def evs (atom (read-string @evs-text)))
